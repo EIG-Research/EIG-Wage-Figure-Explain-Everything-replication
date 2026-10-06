@@ -1,0 +1,17 @@
+state_fips_int,county_fips_int,locality_id_chr,locality_chr,source_chr,notes_chr
+6,37,ca_los_angeles_county,Los Angeles County,Census Bureau FIPS,LA County MW ordinance applies to unincorporated LA County workers; over-attributes to incorporated-city residents in CPS
+6,81,ca_san_mateo_county,San Mateo County,Census Bureau FIPS,
+8,13,co_boulder_county,Boulder County,Census Bureau FIPS,
+17,31,il_cook_county,Cook County,Census Bureau FIPS,Cook County MW ordinance applies to unincorporated Cook County workers; over-attributes to Chicago and other incorporated cities
+19,103,ia_johnson_county,Johnson County,Census Bureau FIPS,
+19,113,ia_linn_county,Linn County,Census Bureau FIPS,
+19,179,ia_wapello_county,Wapello County,Census Bureau FIPS,
+24,27,md_howard_county,Howard County,Census Bureau FIPS,
+24,31,md_montgomery_county,Montgomery County,Census Bureau FIPS,
+24,33,md_prince_georges_county,Prince George's County,Census Bureau FIPS,"locality_id_chr (md_prince_georges_county) is apostrophe-free; the slug rule in 20c/20b strips both curly U+2019 (YAML) and ASCII straight (VZ) apostrophes before deriving the slug, so AS-017 free-text apostrophe variants resolve to the same key."
+35,1,nm_bernalillo_county,Bernalillo County,Census Bureau FIPS,
+35,49,nm_santa_fe_county,Santa Fe County,Census Bureau FIPS,
+53,33,wa_king_county,King County,Census Bureau FIPS,King County MW ordinance applies to unincorporated King County workers; over-attributes to Seattle and other incorporated cities
+36,59,ny_li_westchester,Long Island & Westchester,Census Bureau FIPS,Nassau County component of VZ Long Island and Westchester aggregate
+36,103,ny_li_westchester,Long Island & Westchester,Census Bureau FIPS,Suffolk County component of VZ Long Island and Westchester aggregate
+36,119,ny_li_westchester,Long Island & Westchester,Census Bureau FIPS,Westchester County component of VZ Long Island and Westchester aggregate

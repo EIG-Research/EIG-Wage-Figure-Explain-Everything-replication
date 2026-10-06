@@ -1,0 +1,36 @@
+state_fips_int,metfips_int,county_fips_5digit_int,individcc_int,era_start_yearmonth_int,era_end_yearmonth_int,locality_id_chr,locality_chr,source_chr,notes_chr
+17,16980,,1,200401,201507,il_chicago,Chicago,IPUMS-CPS INDIVIDCC 2004-Jul2015 codes,Chicago in Chicago-Naperville-Joliete IL MSA. Era ends Jul 2015 because IPUMS METFIPS recoding takes effect Aug 2015 per https://cps.ipums.org/cps/codes/individcc_aug2015_onward_codes.shtml.
+17,16980,,1,201508,209912,il_chicago,Chicago,IPUMS-CPS INDIVIDCC Aug2015-onward codes,Chicago in Chicago-Naperville-Elgin IL-IN-WI MSA
+6,41860,,1,200401,201507,ca_san_francisco,San Francisco,IPUMS-CPS INDIVIDCC 2004-Jul2015 codes,San Francisco in SF-Oakland-Fremont CA MSA
+6,41860,,1,201508,209912,ca_san_francisco,San Francisco,IPUMS-CPS INDIVIDCC Aug2015-onward codes,San Francisco in SF-Oakland-Hayward CA MSA
+6,31100,6037,1,200401,201507,ca_los_angeles,Los Angeles,IPUMS-CPS INDIVIDCC 2004-Jul2015 codes,Los Angeles in LA-Long Beach-Santa Ana CA MSA
+6,31080,6037,1,201508,209912,ca_los_angeles,Los Angeles,IPUMS-CPS INDIVIDCC Aug2015-onward codes,Los Angeles in LA-Long Beach-Anaheim CA MSA
+6,31100,6037,6,200401,201507,ca_pasadena,Pasadena,IPUMS-CPS INDIVIDCC 2004-Jul2015 codes,Pasadena in LA-Long Beach-Santa Ana CA MSA
+6,31080,6037,6,201508,209912,ca_pasadena,Pasadena,IPUMS-CPS INDIVIDCC Aug2015-onward codes,Pasadena in LA-Long Beach-Anaheim CA MSA
+6,41740,,1,200401,201507,ca_san_diego,San Diego,IPUMS-CPS INDIVIDCC 2004-Jul2015 codes,San Diego in San Diego-Carlsbad-San Marcos CA MSA
+6,41740,,1,201508,209912,ca_san_diego,San Diego,IPUMS-CPS INDIVIDCC Aug2015-onward codes,San Diego in San Diego-Carlsbad CA MSA
+53,42660,,1,200401,201507,wa_seattle,Seattle,IPUMS-CPS INDIVIDCC 2004-Jul2015 codes,Seattle in Seattle-Tacoma-Bellevue WA MSA
+53,42660,,1,201508,209912,wa_seattle,Seattle,IPUMS-CPS INDIVIDCC Aug2015-onward codes,Seattle in Seattle-Tacoma-Bellevue WA MSA
+53,42660,,2,200401,201507,wa_tacoma,Tacoma,IPUMS-CPS INDIVIDCC 2004-Jul2015 codes,Tacoma in Seattle-Tacoma-Bellevue WA MSA
+53,42660,,2,201508,209912,wa_tacoma,Tacoma,IPUMS-CPS INDIVIDCC Aug2015-onward codes,Tacoma in Seattle-Tacoma-Bellevue WA MSA
+6,41860,6001,1,200401,201507,ca_oakland,Oakland,IPUMS-CPS INDIVIDCC 2004-Jul2015 codes,Oakland in SF-Oakland-Fremont CA MSA Alameda County
+6,41860,6001,1,201508,209912,ca_oakland,Oakland,IPUMS-CPS INDIVIDCC Aug2015-onward codes,Oakland in SF-Oakland-Hayward CA MSA Alameda County
+6,41860,6001,2,200401,201507,ca_fremont,Fremont,IPUMS-CPS INDIVIDCC 2004-Jul2015 codes,Fremont in SF-Oakland-Fremont CA MSA Alameda County
+6,41860,6001,2,201508,209912,ca_fremont,Fremont,IPUMS-CPS INDIVIDCC Aug2015-onward codes,Fremont in SF-Oakland-Hayward CA MSA Alameda County
+6,41860,6001,3,200401,201507,ca_hayward,Hayward,IPUMS-CPS INDIVIDCC 2004-Jul2015 codes,Hayward in SF-Oakland-Fremont CA MSA Alameda County
+6,41860,6001,3,201508,209912,ca_hayward,Hayward,IPUMS-CPS INDIVIDCC Aug2015-onward codes,Hayward in SF-Oakland-Hayward CA MSA Alameda County
+6,41860,6001,4,200401,201507,ca_berkeley,Berkeley,IPUMS-CPS INDIVIDCC 2004-Jul2015 codes,Berkeley in SF-Oakland-Fremont CA MSA Alameda County
+6,41860,6001,4,201508,209912,ca_berkeley,Berkeley,IPUMS-CPS INDIVIDCC Aug2015-onward codes,Berkeley in SF-Oakland-Hayward CA MSA Alameda County
+6,41940,,1,200401,201507,ca_san_jose,San Jose,IPUMS-CPS INDIVIDCC 2004-Jul2015 codes,San Jose in San Jose-Sunnyvale-Santa Clara CA MSA
+6,41940,,1,201508,209912,ca_san_jose,San Jose,IPUMS-CPS INDIVIDCC Aug2015-onward codes,San Jose in San Jose-Sunnyvale-Santa Clara CA MSA
+6,41940,,2,200401,201507,ca_sunnyvale,Sunnyvale,IPUMS-CPS INDIVIDCC 2004-Jul2015 codes,Sunnyvale in San Jose-Sunnyvale-Santa Clara CA MSA
+6,41940,,2,201508,209912,ca_sunnyvale,Sunnyvale,IPUMS-CPS INDIVIDCC Aug2015-onward codes,Sunnyvale in San Jose-Sunnyvale-Santa Clara CA MSA
+6,41940,,3,200401,201507,ca_santa_clara,Santa Clara,IPUMS-CPS INDIVIDCC 2004-Jul2015 codes,Santa Clara in San Jose-Sunnyvale-Santa Clara CA MSA
+6,41940,,3,201508,209912,ca_santa_clara,Santa Clara,IPUMS-CPS INDIVIDCC Aug2015-onward codes,Santa Clara in San Jose-Sunnyvale-Santa Clara CA MSA
+8,19740,,1,200401,201507,co_denver,Denver,IPUMS-CPS INDIVIDCC 2004-Jul2015 codes,Denver in Denver-Aurora CO MSA
+8,19740,,1,201508,209912,co_denver,Denver,IPUMS-CPS INDIVIDCC Aug2015-onward codes,Denver in Denver-Aurora-Lakewood CO MSA
+27,33460,,1,200401,201507,mn_minneapolis,Minneapolis,IPUMS-CPS INDIVIDCC 2004-Jul2015 codes,Minneapolis in Minneapolis-St. Paul-Bloomington MSA (METFIPS 33460 in 2004-2015)
+27,34460,,1,201508,209912,mn_minneapolis,Minneapolis,IPUMS-CPS INDIVIDCC Aug2015-onward codes,Minneapolis in Minneapolis-St. Paul-Bloomington MN-WI MSA (METFIPS changed to 34460 in 2015)
+27,34460,,2,201508,209912,mn_st_paul,St. Paul,IPUMS-CPS INDIVIDCC Aug2015-onward codes,St. Paul newly identified in 2015-onward codes
+36,35620,,1,201508,209912,ny_new_york_city,New York City,IPUMS-CPS INDIVIDCC Aug2015-onward codes,New York City in NY-Newark-Jersey City NY-NJ-PA MSA newly identified by INDIVIDCC in 2015-onward
+41,38900,,1,201508,209912,or_portland,Portland,IPUMS-CPS INDIVIDCC Aug2015-onward codes,Portland Oregon in Portland-Vancouver-Hillsboro OR-WA MSA newly identified in 2015-onward

@@ -1,0 +1,2195 @@
+metadata:
+  description: Forward extension of Vaghul-Zipperer state and sub-state minimum wage panels, 2023-01-01 onward.
+  generated_at: '2026-05-05'
+  generator: code/_utils/synthesize_extension_yaml.py
+  sources:
+  - name: DOL_WHD_history_2026-05-04
+    url: https://www.dol.gov/agencies/whd/state/minimum-wage/history
+    description: U.S. DOL Wage and Hour Division historical state minimum wage table (annual rates 1968-2024).
+  - name: EPI_tracker_2026-05-04
+    url: https://www.epi.org/minimum-wage-tracker/
+    description: EPI Minimum Wage Tracker (current rates plus most-recent and upcoming changes).
+  schema_version: '0.3'
+  effective_date_convention: YYYY-MM-DD; inferred_effective_date=true marks dates defaulted to Jan 1 because the source provides
+    only annual snapshots (DOL) or because the date is inferred from EPI rate_from of a subsequent event (indexed states).
+  rate_units: nominal USD per hour
+  rate_min: general state or local minimum wage
+  rate_tipped: cash subminimum for tipped workers; null if not separately documented
+  locality_id: stable snake_case slug for substate events (e.g., ca_san_francisco). Used as the join key in 20c/20d. State
+    events do not carry locality_id.
+  change_log:
+  - 'v0.1 -> v0.2: added inferred Jan 1, 2025 step events for indexed states whose EPI rate_from differs from DOL 2024 rate.'
+  - 'v0.2 -> v0.3 (2026-05-05): every substate event now carries locality_id (stable slug) to fix the New York tri-county
+    join failure and to harden the join against free-text drift.'
+state_changes:
+- jurisdiction: Alaska
+  state_abbr: AK
+  state_fips: 2
+  effective_date: '2023-01-01'
+  rate_min: 10.85
+  rate_tipped: null
+  inferred_effective_date: true
+  source: DOL_WHD_history_2026-05-04
+  source_url: https://www.dol.gov/agencies/whd/state/minimum-wage/history
+  notes: Year-over-year change inferred from DOL WHD annual table; effective date defaults to Jan 1.
+- jurisdiction: Alaska
+  state_abbr: AK
+  state_fips: 2
+  effective_date: '2024-01-01'
+  rate_min: 11.73
+  rate_tipped: null
+  inferred_effective_date: true
+  source: DOL_WHD_history_2026-05-04
+  source_url: https://www.dol.gov/agencies/whd/state/minimum-wage/history
+  notes: Year-over-year change inferred from DOL WHD annual table; effective date defaults to Jan 1.
+- jurisdiction: Alaska
+  state_abbr: AK
+  state_fips: 2
+  effective_date: '2025-01-01'
+  rate_min: 11.91
+  rate_tipped: 11.91
+  inferred_effective_date: true
+  source: EPI_tracker_2026-05-04_inferred
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: Indexed Jan 1, 2025 step inferred from EPI rate_from of subsequent 2025-07-01 change (11.91 -> 13.0). Default Jan
+    1 effective date.
+- jurisdiction: Alaska
+  state_abbr: AK
+  state_fips: 2
+  effective_date: '2025-07-01'
+  rate_min: 13.0
+  rate_tipped: 13.0
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $11.91 to $13.00 effective 7-1-2025
+- jurisdiction: Alaska
+  state_abbr: AK
+  state_fips: 2
+  effective_date: '2026-07-01'
+  rate_min: 14.0
+  rate_tipped: 14.0
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $14.00, effective 7-1-2026
+- jurisdiction: Alaska
+  state_abbr: AK
+  state_fips: 2
+  effective_date: '2027-07-01'
+  rate_min: 15.0
+  rate_tipped: 15.0
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $15.00, effective 7-1-2027
+- jurisdiction: Arizona
+  state_abbr: AZ
+  state_fips: 4
+  effective_date: '2023-01-01'
+  rate_min: 13.85
+  rate_tipped: null
+  inferred_effective_date: true
+  source: DOL_WHD_history_2026-05-04
+  source_url: https://www.dol.gov/agencies/whd/state/minimum-wage/history
+  notes: Year-over-year change inferred from DOL WHD annual table; effective date defaults to Jan 1.
+- jurisdiction: Arizona
+  state_abbr: AZ
+  state_fips: 4
+  effective_date: '2024-01-01'
+  rate_min: 14.35
+  rate_tipped: null
+  inferred_effective_date: true
+  source: DOL_WHD_history_2026-05-04
+  source_url: https://www.dol.gov/agencies/whd/state/minimum-wage/history
+  notes: Year-over-year change inferred from DOL WHD annual table; effective date defaults to Jan 1.
+- jurisdiction: Arizona
+  state_abbr: AZ
+  state_fips: 4
+  effective_date: '2025-01-01'
+  rate_min: 14.7
+  rate_tipped: 11.7
+  inferred_effective_date: true
+  source: EPI_tracker_2026-05-04_inferred
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: Indexed Jan 1, 2025 step inferred from EPI rate_from of subsequent 2026-01-01 change (14.7 -> 15.15). Default Jan
+    1 effective date.
+- jurisdiction: Arizona
+  state_abbr: AZ
+  state_fips: 4
+  effective_date: '2026-01-01'
+  rate_min: 15.15
+  rate_tipped: 12.15
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $14.70 to $15.15, effective 1-1-2026
+- jurisdiction: California
+  state_abbr: CA
+  state_fips: 6
+  effective_date: '2023-01-01'
+  rate_min: 15.5
+  rate_tipped: null
+  inferred_effective_date: true
+  source: DOL_WHD_history_2026-05-04
+  source_url: https://www.dol.gov/agencies/whd/state/minimum-wage/history
+  notes: Year-over-year change inferred from DOL WHD annual table; effective date defaults to Jan 1.
+- jurisdiction: California
+  state_abbr: CA
+  state_fips: 6
+  effective_date: '2024-01-01'
+  rate_min: 16.0
+  rate_tipped: null
+  inferred_effective_date: true
+  source: DOL_WHD_history_2026-05-04
+  source_url: https://www.dol.gov/agencies/whd/state/minimum-wage/history
+  notes: Year-over-year change inferred from DOL WHD annual table; effective date defaults to Jan 1.
+- jurisdiction: California
+  state_abbr: CA
+  state_fips: 6
+  effective_date: '2025-01-01'
+  rate_min: 16.5
+  rate_tipped: 16.5
+  inferred_effective_date: true
+  source: EPI_tracker_2026-05-04_inferred
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: Indexed Jan 1, 2025 step inferred from EPI rate_from of subsequent 2026-01-01 change (16.5 -> 16.9). Default Jan
+    1 effective date.
+- jurisdiction: California
+  state_abbr: CA
+  state_fips: 6
+  effective_date: '2026-01-01'
+  rate_min: 16.9
+  rate_tipped: 16.9
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $16.50 to $16.90, effective 1-1-2026
+- jurisdiction: Colorado
+  state_abbr: CO
+  state_fips: 8
+  effective_date: '2023-01-01'
+  rate_min: 13.65
+  rate_tipped: null
+  inferred_effective_date: true
+  source: DOL_WHD_history_2026-05-04
+  source_url: https://www.dol.gov/agencies/whd/state/minimum-wage/history
+  notes: Year-over-year change inferred from DOL WHD annual table; effective date defaults to Jan 1.
+- jurisdiction: Colorado
+  state_abbr: CO
+  state_fips: 8
+  effective_date: '2024-01-01'
+  rate_min: 14.42
+  rate_tipped: null
+  inferred_effective_date: true
+  source: DOL_WHD_history_2026-05-04
+  source_url: https://www.dol.gov/agencies/whd/state/minimum-wage/history
+  notes: Year-over-year change inferred from DOL WHD annual table; effective date defaults to Jan 1.
+- jurisdiction: Colorado
+  state_abbr: CO
+  state_fips: 8
+  effective_date: '2025-01-01'
+  rate_min: 14.81
+  rate_tipped: 11.79
+  inferred_effective_date: true
+  source: EPI_tracker_2026-05-04_inferred
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: Indexed Jan 1, 2025 step inferred from EPI rate_from of subsequent 2026-01-01 change (14.81 -> 15.16). Default Jan
+    1 effective date.
+- jurisdiction: Colorado
+  state_abbr: CO
+  state_fips: 8
+  effective_date: '2026-01-01'
+  rate_min: 15.16
+  rate_tipped: 12.14
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $14.81 to $15.16, effective 1-1-2026
+- jurisdiction: Connecticut
+  state_abbr: CT
+  state_fips: 9
+  effective_date: '2023-01-01'
+  rate_min: 15.0
+  rate_tipped: null
+  inferred_effective_date: true
+  source: DOL_WHD_history_2026-05-04
+  source_url: https://www.dol.gov/agencies/whd/state/minimum-wage/history
+  notes: Year-over-year change inferred from DOL WHD annual table; effective date defaults to Jan 1.
+- jurisdiction: Connecticut
+  state_abbr: CT
+  state_fips: 9
+  effective_date: '2024-01-01'
+  rate_min: 15.69
+  rate_tipped: null
+  inferred_effective_date: true
+  source: DOL_WHD_history_2026-05-04
+  source_url: https://www.dol.gov/agencies/whd/state/minimum-wage/history
+  notes: Year-over-year change inferred from DOL WHD annual table; effective date defaults to Jan 1.
+- jurisdiction: Connecticut
+  state_abbr: CT
+  state_fips: 9
+  effective_date: '2025-01-01'
+  rate_min: 16.35
+  rate_tipped: null
+  inferred_effective_date: true
+  source: EPI_tracker_2026-05-04_inferred
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: Indexed Jan 1, 2025 step inferred from EPI rate_from of subsequent 2026-01-01 change (16.35 -> 16.94). Default Jan
+    1 effective date.
+- jurisdiction: Connecticut
+  state_abbr: CT
+  state_fips: 9
+  effective_date: '2026-01-01'
+  rate_min: 16.94
+  rate_tipped: null
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $16.35 to $16.94, effective 1-1-2026
+- jurisdiction: Delaware
+  state_abbr: DE
+  state_fips: 10
+  effective_date: '2023-01-01'
+  rate_min: 11.75
+  rate_tipped: null
+  inferred_effective_date: true
+  source: DOL_WHD_history_2026-05-04
+  source_url: https://www.dol.gov/agencies/whd/state/minimum-wage/history
+  notes: Year-over-year change inferred from DOL WHD annual table; effective date defaults to Jan 1.
+- jurisdiction: Delaware
+  state_abbr: DE
+  state_fips: 10
+  effective_date: '2024-01-01'
+  rate_min: 13.25
+  rate_tipped: null
+  inferred_effective_date: true
+  source: DOL_WHD_history_2026-05-04
+  source_url: https://www.dol.gov/agencies/whd/state/minimum-wage/history
+  notes: Year-over-year change inferred from DOL WHD annual table; effective date defaults to Jan 1.
+- jurisdiction: Delaware
+  state_abbr: DE
+  state_fips: 10
+  effective_date: '2025-01-01'
+  rate_min: 15.0
+  rate_tipped: null
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $13.25 to $15.00, effective 1-1-2025
+- jurisdiction: District of Columbia
+  state_abbr: DC
+  state_fips: 11
+  effective_date: '2023-01-01'
+  rate_min: 17.0
+  rate_tipped: null
+  inferred_effective_date: true
+  source: DOL_WHD_history_2026-05-04
+  source_url: https://www.dol.gov/agencies/whd/state/minimum-wage/history
+  notes: Year-over-year change inferred from DOL WHD annual table; effective date defaults to Jan 1.
+- jurisdiction: District of Columbia
+  state_abbr: DC
+  state_fips: 11
+  effective_date: '2024-01-01'
+  rate_min: 17.5
+  rate_tipped: null
+  inferred_effective_date: true
+  source: DOL_WHD_history_2026-05-04
+  source_url: https://www.dol.gov/agencies/whd/state/minimum-wage/history
+  notes: Year-over-year change inferred from DOL WHD annual table; effective date defaults to Jan 1.
+- jurisdiction: District of Columbia
+  state_abbr: DC
+  state_fips: 11
+  effective_date: '2025-07-01'
+  rate_min: 17.95
+  rate_tipped: null
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $17.50 to $17.95, effective 7-1-2025
+- jurisdiction: Florida
+  state_abbr: FL
+  state_fips: 12
+  effective_date: '2023-01-01'
+  rate_min: 12.0
+  rate_tipped: null
+  inferred_effective_date: true
+  source: DOL_WHD_history_2026-05-04
+  source_url: https://www.dol.gov/agencies/whd/state/minimum-wage/history
+  notes: Year-over-year change inferred from DOL WHD annual table; effective date defaults to Jan 1.
+- jurisdiction: Florida
+  state_abbr: FL
+  state_fips: 12
+  effective_date: '2025-01-01'
+  rate_min: 13.0
+  rate_tipped: 9.98
+  inferred_effective_date: true
+  source: EPI_tracker_2026-05-04_inferred
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: Indexed Jan 1, 2025 step inferred from EPI rate_from of subsequent 2025-09-30 change (13.0 -> 14.0). Default Jan
+    1 effective date.
+- jurisdiction: Florida
+  state_abbr: FL
+  state_fips: 12
+  effective_date: '2025-09-30'
+  rate_min: 14.0
+  rate_tipped: 10.98
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $13.00 to $14.00, effective 9-30-2025
+- jurisdiction: Florida
+  state_abbr: FL
+  state_fips: 12
+  effective_date: '2026-09-30'
+  rate_min: 15.0
+  rate_tipped: 11.98
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $15.00, effective 9-30-2026
+- jurisdiction: Georgia
+  state_abbr: GA
+  state_fips: 13
+  effective_date: '2023-01-01'
+  rate_min: 5.15
+  rate_tipped: null
+  inferred_effective_date: true
+  source: DOL_WHD_history_2026-05-04
+  source_url: https://www.dol.gov/agencies/whd/state/minimum-wage/history
+  notes: Year-over-year change inferred from DOL WHD annual table; effective date defaults to Jan 1.
+- jurisdiction: Hawaii
+  state_abbr: HI
+  state_fips: 15
+  effective_date: '2024-01-01'
+  rate_min: 14.0
+  rate_tipped: null
+  inferred_effective_date: true
+  source: DOL_WHD_history_2026-05-04
+  source_url: https://www.dol.gov/agencies/whd/state/minimum-wage/history
+  notes: Year-over-year change inferred from DOL WHD annual table; effective date defaults to Jan 1.
+- jurisdiction: Hawaii
+  state_abbr: HI
+  state_fips: 15
+  effective_date: '2026-01-01'
+  rate_min: 16.0
+  rate_tipped: null
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $14.00 to $16.00, effective 1-1-2026
+- jurisdiction: Hawaii
+  state_abbr: HI
+  state_fips: 15
+  effective_date: '2028-01-01'
+  rate_min: 18.0
+  rate_tipped: 16.5
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $18.00, effective 1-1-2028
+- jurisdiction: Illinois
+  state_abbr: IL
+  state_fips: 17
+  effective_date: '2023-01-01'
+  rate_min: 13.0
+  rate_tipped: null
+  inferred_effective_date: true
+  source: DOL_WHD_history_2026-05-04
+  source_url: https://www.dol.gov/agencies/whd/state/minimum-wage/history
+  notes: Year-over-year change inferred from DOL WHD annual table; effective date defaults to Jan 1.
+- jurisdiction: Illinois
+  state_abbr: IL
+  state_fips: 17
+  effective_date: '2024-01-01'
+  rate_min: 14.0
+  rate_tipped: null
+  inferred_effective_date: true
+  source: DOL_WHD_history_2026-05-04
+  source_url: https://www.dol.gov/agencies/whd/state/minimum-wage/history
+  notes: Year-over-year change inferred from DOL WHD annual table; effective date defaults to Jan 1.
+- jurisdiction: Illinois
+  state_abbr: IL
+  state_fips: 17
+  effective_date: '2025-01-01'
+  rate_min: 15.0
+  rate_tipped: 9.0
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $14.00 to $15.00, effective 1-1-2025
+- jurisdiction: Maine
+  state_abbr: ME
+  state_fips: 23
+  effective_date: '2023-01-01'
+  rate_min: 13.8
+  rate_tipped: null
+  inferred_effective_date: true
+  source: DOL_WHD_history_2026-05-04
+  source_url: https://www.dol.gov/agencies/whd/state/minimum-wage/history
+  notes: Year-over-year change inferred from DOL WHD annual table; effective date defaults to Jan 1.
+- jurisdiction: Maine
+  state_abbr: ME
+  state_fips: 23
+  effective_date: '2024-01-01'
+  rate_min: 14.15
+  rate_tipped: null
+  inferred_effective_date: true
+  source: DOL_WHD_history_2026-05-04
+  source_url: https://www.dol.gov/agencies/whd/state/minimum-wage/history
+  notes: Year-over-year change inferred from DOL WHD annual table; effective date defaults to Jan 1.
+- jurisdiction: Maine
+  state_abbr: ME
+  state_fips: 23
+  effective_date: '2025-01-01'
+  rate_min: 14.65
+  rate_tipped: 7.33
+  inferred_effective_date: true
+  source: EPI_tracker_2026-05-04_inferred
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: Indexed Jan 1, 2025 step inferred from EPI rate_from of subsequent 2026-01-01 change (14.65 -> 15.1). Default Jan
+    1 effective date.
+- jurisdiction: Maine
+  state_abbr: ME
+  state_fips: 23
+  effective_date: '2026-01-01'
+  rate_min: 15.1
+  rate_tipped: 7.55
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $14.65 to $15.10, effective 1-1-2026
+- jurisdiction: Maryland
+  state_abbr: MD
+  state_fips: 24
+  effective_date: '2023-01-01'
+  rate_min: 13.25
+  rate_tipped: null
+  inferred_effective_date: true
+  source: DOL_WHD_history_2026-05-04
+  source_url: https://www.dol.gov/agencies/whd/state/minimum-wage/history
+  notes: Year-over-year change inferred from DOL WHD annual table; effective date defaults to Jan 1.
+- jurisdiction: Maryland
+  state_abbr: MD
+  state_fips: 24
+  effective_date: '2024-01-01'
+  rate_min: 15.0
+  rate_tipped: null
+  inferred_effective_date: true
+  source: DOL_WHD_history_2026-05-04
+  source_url: https://www.dol.gov/agencies/whd/state/minimum-wage/history
+  notes: Year-over-year change inferred from DOL WHD annual table; effective date defaults to Jan 1.
+- jurisdiction: Massachusetts
+  state_abbr: MA
+  state_fips: 25
+  effective_date: '2023-01-01'
+  rate_min: 15.0
+  rate_tipped: null
+  inferred_effective_date: true
+  source: DOL_WHD_history_2026-05-04
+  source_url: https://www.dol.gov/agencies/whd/state/minimum-wage/history
+  notes: Year-over-year change inferred from DOL WHD annual table; effective date defaults to Jan 1.
+- jurisdiction: Michigan
+  state_abbr: MI
+  state_fips: 26
+  effective_date: '2023-01-01'
+  rate_min: 10.1
+  rate_tipped: null
+  inferred_effective_date: true
+  source: DOL_WHD_history_2026-05-04
+  source_url: https://www.dol.gov/agencies/whd/state/minimum-wage/history
+  notes: Year-over-year change inferred from DOL WHD annual table; effective date defaults to Jan 1.
+- jurisdiction: Michigan
+  state_abbr: MI
+  state_fips: 26
+  effective_date: '2024-01-01'
+  rate_min: 10.33
+  rate_tipped: null
+  inferred_effective_date: true
+  source: DOL_WHD_history_2026-05-04
+  source_url: https://www.dol.gov/agencies/whd/state/minimum-wage/history
+  notes: Year-over-year change inferred from DOL WHD annual table; effective date defaults to Jan 1.
+- jurisdiction: Michigan
+  state_abbr: MI
+  state_fips: 26
+  effective_date: '2025-01-01'
+  rate_min: 12.48
+  rate_tipped: 4.74
+  inferred_effective_date: true
+  source: EPI_tracker_2026-05-04_inferred
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: Indexed Jan 1, 2025 step inferred from EPI rate_from of subsequent 2026-01-01 change (12.48 -> 13.73). Default Jan
+    1 effective date.
+- jurisdiction: Michigan
+  state_abbr: MI
+  state_fips: 26
+  effective_date: '2026-01-01'
+  rate_min: 13.73
+  rate_tipped: 5.49
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $12.48 to $13.73, effective 1-1-2026
+- jurisdiction: Michigan
+  state_abbr: MI
+  state_fips: 26
+  effective_date: '2027-01-01'
+  rate_min: 15.0
+  rate_tipped: null
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $15.00, effective 1-1-2027
+- jurisdiction: Minnesota
+  state_abbr: MN
+  state_fips: 27
+  effective_date: '2023-01-01'
+  rate_min: 10.59
+  rate_tipped: null
+  inferred_effective_date: true
+  source: DOL_WHD_history_2026-05-04
+  source_url: https://www.dol.gov/agencies/whd/state/minimum-wage/history
+  notes: Year-over-year change inferred from DOL WHD annual table; effective date defaults to Jan 1.
+- jurisdiction: Minnesota
+  state_abbr: MN
+  state_fips: 27
+  effective_date: '2024-01-01'
+  rate_min: 10.85
+  rate_tipped: null
+  inferred_effective_date: true
+  source: DOL_WHD_history_2026-05-04
+  source_url: https://www.dol.gov/agencies/whd/state/minimum-wage/history
+  notes: Year-over-year change inferred from DOL WHD annual table; effective date defaults to Jan 1.
+- jurisdiction: Minnesota
+  state_abbr: MN
+  state_fips: 27
+  effective_date: '2025-01-01'
+  rate_min: 11.13
+  rate_tipped: 11.13
+  inferred_effective_date: true
+  source: EPI_tracker_2026-05-04_inferred
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: Indexed Jan 1, 2025 step inferred from EPI rate_from of subsequent 2026-01-01 change (11.13 -> 11.41). Default Jan
+    1 effective date.
+- jurisdiction: Minnesota
+  state_abbr: MN
+  state_fips: 27
+  effective_date: '2026-01-01'
+  rate_min: 11.41
+  rate_tipped: 11.41
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $11.13 to $11.41, effective 1-1-2026
+- jurisdiction: Missouri
+  state_abbr: MO
+  state_fips: 29
+  effective_date: '2023-01-01'
+  rate_min: 12.0
+  rate_tipped: null
+  inferred_effective_date: true
+  source: DOL_WHD_history_2026-05-04
+  source_url: https://www.dol.gov/agencies/whd/state/minimum-wage/history
+  notes: Year-over-year change inferred from DOL WHD annual table; effective date defaults to Jan 1.
+- jurisdiction: Missouri
+  state_abbr: MO
+  state_fips: 29
+  effective_date: '2024-01-01'
+  rate_min: 12.3
+  rate_tipped: null
+  inferred_effective_date: true
+  source: DOL_WHD_history_2026-05-04
+  source_url: https://www.dol.gov/agencies/whd/state/minimum-wage/history
+  notes: Year-over-year change inferred from DOL WHD annual table; effective date defaults to Jan 1.
+- jurisdiction: Missouri
+  state_abbr: MO
+  state_fips: 29
+  effective_date: '2025-01-01'
+  rate_min: 13.75
+  rate_tipped: 6.88
+  inferred_effective_date: true
+  source: EPI_tracker_2026-05-04_inferred
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: Indexed Jan 1, 2025 step inferred from EPI rate_from of subsequent 2026-01-01 change (13.75 -> 15.0). Default Jan
+    1 effective date.
+- jurisdiction: Missouri
+  state_abbr: MO
+  state_fips: 29
+  effective_date: '2026-01-01'
+  rate_min: 15.0
+  rate_tipped: 7.5
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $13.75 to $15.00, effective 1-1-2026
+- jurisdiction: Montana
+  state_abbr: MT
+  state_fips: 30
+  effective_date: '2023-01-01'
+  rate_min: 9.95
+  rate_tipped: null
+  inferred_effective_date: true
+  source: DOL_WHD_history_2026-05-04
+  source_url: https://www.dol.gov/agencies/whd/state/minimum-wage/history
+  notes: Year-over-year change inferred from DOL WHD annual table; effective date defaults to Jan 1.
+- jurisdiction: Montana
+  state_abbr: MT
+  state_fips: 30
+  effective_date: '2024-01-01'
+  rate_min: 10.3
+  rate_tipped: null
+  inferred_effective_date: true
+  source: DOL_WHD_history_2026-05-04
+  source_url: https://www.dol.gov/agencies/whd/state/minimum-wage/history
+  notes: Year-over-year change inferred from DOL WHD annual table; effective date defaults to Jan 1.
+- jurisdiction: Montana
+  state_abbr: MT
+  state_fips: 30
+  effective_date: '2025-01-01'
+  rate_min: 10.55
+  rate_tipped: 10.55
+  inferred_effective_date: true
+  source: EPI_tracker_2026-05-04_inferred
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: Indexed Jan 1, 2025 step inferred from EPI rate_from of subsequent 2026-01-01 change (10.55 -> 10.85). Default Jan
+    1 effective date.
+- jurisdiction: Montana
+  state_abbr: MT
+  state_fips: 30
+  effective_date: '2026-01-01'
+  rate_min: 10.85
+  rate_tipped: 10.85
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $10.55 to $10.85, effective 1-1-2026
+- jurisdiction: Nebraska
+  state_abbr: NE
+  state_fips: 31
+  effective_date: '2023-01-01'
+  rate_min: 10.5
+  rate_tipped: null
+  inferred_effective_date: true
+  source: DOL_WHD_history_2026-05-04
+  source_url: https://www.dol.gov/agencies/whd/state/minimum-wage/history
+  notes: Year-over-year change inferred from DOL WHD annual table; effective date defaults to Jan 1.
+- jurisdiction: Nebraska
+  state_abbr: NE
+  state_fips: 31
+  effective_date: '2024-01-01'
+  rate_min: 12.0
+  rate_tipped: null
+  inferred_effective_date: true
+  source: DOL_WHD_history_2026-05-04
+  source_url: https://www.dol.gov/agencies/whd/state/minimum-wage/history
+  notes: Year-over-year change inferred from DOL WHD annual table; effective date defaults to Jan 1.
+- jurisdiction: Nebraska
+  state_abbr: NE
+  state_fips: 31
+  effective_date: '2025-01-01'
+  rate_min: 13.5
+  rate_tipped: null
+  inferred_effective_date: true
+  source: EPI_tracker_2026-05-04_inferred
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: Indexed Jan 1, 2025 step inferred from EPI rate_from of subsequent 2026-01-01 change (13.5 -> 15.0). Default Jan
+    1 effective date.
+- jurisdiction: Nebraska
+  state_abbr: NE
+  state_fips: 31
+  effective_date: '2026-01-01'
+  rate_min: 15.0
+  rate_tipped: null
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $13.50 to $15.00, effective 1-1-2026
+- jurisdiction: Nevada
+  state_abbr: NV
+  state_fips: 32
+  effective_date: '2023-01-01'
+  rate_min: 11.25
+  rate_tipped: null
+  inferred_effective_date: true
+  source: DOL_WHD_history_2026-05-04
+  source_url: https://www.dol.gov/agencies/whd/state/minimum-wage/history
+  notes: Year-over-year change inferred from DOL WHD annual table; effective date defaults to Jan 1.
+- jurisdiction: Nevada
+  state_abbr: NV
+  state_fips: 32
+  effective_date: '2024-01-01'
+  rate_min: 12.0
+  rate_tipped: null
+  inferred_effective_date: true
+  source: DOL_WHD_history_2026-05-04
+  source_url: https://www.dol.gov/agencies/whd/state/minimum-wage/history
+  notes: Year-over-year change inferred from DOL WHD annual table; effective date defaults to Jan 1.
+- jurisdiction: New Jersey
+  state_abbr: NJ
+  state_fips: 34
+  effective_date: '2023-01-01'
+  rate_min: 14.13
+  rate_tipped: null
+  inferred_effective_date: true
+  source: DOL_WHD_history_2026-05-04
+  source_url: https://www.dol.gov/agencies/whd/state/minimum-wage/history
+  notes: Year-over-year change inferred from DOL WHD annual table; effective date defaults to Jan 1.
+- jurisdiction: New Jersey
+  state_abbr: NJ
+  state_fips: 34
+  effective_date: '2024-01-01'
+  rate_min: 15.13
+  rate_tipped: null
+  inferred_effective_date: true
+  source: DOL_WHD_history_2026-05-04
+  source_url: https://www.dol.gov/agencies/whd/state/minimum-wage/history
+  notes: Year-over-year change inferred from DOL WHD annual table; effective date defaults to Jan 1.
+- jurisdiction: New Jersey
+  state_abbr: NJ
+  state_fips: 34
+  effective_date: '2025-01-01'
+  rate_min: 15.49
+  rate_tipped: 5.62
+  inferred_effective_date: true
+  source: EPI_tracker_2026-05-04_inferred
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: Indexed Jan 1, 2025 step inferred from EPI rate_from of subsequent 2026-01-01 change (15.49 -> 15.92). Default Jan
+    1 effective date.
+- jurisdiction: New Jersey
+  state_abbr: NJ
+  state_fips: 34
+  effective_date: '2026-01-01'
+  rate_min: 15.92
+  rate_tipped: 6.05
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $15.49 to $15.92, effective 1-1-2026
+- jurisdiction: New Mexico
+  state_abbr: NM
+  state_fips: 35
+  effective_date: '2023-01-01'
+  rate_min: 12.0
+  rate_tipped: null
+  inferred_effective_date: true
+  source: DOL_WHD_history_2026-05-04
+  source_url: https://www.dol.gov/agencies/whd/state/minimum-wage/history
+  notes: Year-over-year change inferred from DOL WHD annual table; effective date defaults to Jan 1.
+- jurisdiction: New York
+  state_abbr: NY
+  state_fips: 36
+  effective_date: '2024-01-01'
+  rate_min: 15.0
+  rate_tipped: null
+  inferred_effective_date: true
+  source: DOL_WHD_history_2026-05-04
+  source_url: https://www.dol.gov/agencies/whd/state/minimum-wage/history
+  notes: Year-over-year change inferred from DOL WHD annual table; effective date defaults to Jan 1.
+- jurisdiction: New York
+  state_abbr: NY
+  state_fips: 36
+  effective_date: '2025-01-01'
+  rate_min: 15.5
+  rate_tipped: 10.35
+  inferred_effective_date: true
+  source: EPI_tracker_2026-05-04_inferred
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: Indexed Jan 1, 2025 step inferred from EPI rate_from of subsequent 2026-01-01 change (15.5 -> 16.0). Default Jan
+    1 effective date.
+- jurisdiction: New York
+  state_abbr: NY
+  state_fips: 36
+  effective_date: '2026-01-01'
+  rate_min: 16.0
+  rate_tipped: 10.65
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $15.50 to $16.00, effective 1-1-2026
+- jurisdiction: Ohio
+  state_abbr: OH
+  state_fips: 39
+  effective_date: '2023-01-01'
+  rate_min: 10.1
+  rate_tipped: null
+  inferred_effective_date: true
+  source: DOL_WHD_history_2026-05-04
+  source_url: https://www.dol.gov/agencies/whd/state/minimum-wage/history
+  notes: Year-over-year change inferred from DOL WHD annual table; effective date defaults to Jan 1.
+- jurisdiction: Ohio
+  state_abbr: OH
+  state_fips: 39
+  effective_date: '2024-01-01'
+  rate_min: 10.45
+  rate_tipped: null
+  inferred_effective_date: true
+  source: DOL_WHD_history_2026-05-04
+  source_url: https://www.dol.gov/agencies/whd/state/minimum-wage/history
+  notes: Year-over-year change inferred from DOL WHD annual table; effective date defaults to Jan 1.
+- jurisdiction: Ohio
+  state_abbr: OH
+  state_fips: 39
+  effective_date: '2025-01-01'
+  rate_min: 10.7
+  rate_tipped: 5.35
+  inferred_effective_date: true
+  source: EPI_tracker_2026-05-04_inferred
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: Indexed Jan 1, 2025 step inferred from EPI rate_from of subsequent 2026-01-01 change (10.7 -> 11.0). Default Jan
+    1 effective date.
+- jurisdiction: Ohio
+  state_abbr: OH
+  state_fips: 39
+  effective_date: '2026-01-01'
+  rate_min: 11.0
+  rate_tipped: 5.5
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $10.70 to $11.00, effective 1-1-2026
+- jurisdiction: Oregon
+  state_abbr: OR
+  state_fips: 41
+  effective_date: '2023-01-01'
+  rate_min: 14.2
+  rate_tipped: null
+  inferred_effective_date: true
+  source: DOL_WHD_history_2026-05-04
+  source_url: https://www.dol.gov/agencies/whd/state/minimum-wage/history
+  notes: Year-over-year change inferred from DOL WHD annual table; effective date defaults to Jan 1.
+- jurisdiction: Oregon
+  state_abbr: OR
+  state_fips: 41
+  effective_date: '2024-01-01'
+  rate_min: 14.7
+  rate_tipped: null
+  inferred_effective_date: true
+  source: DOL_WHD_history_2026-05-04
+  source_url: https://www.dol.gov/agencies/whd/state/minimum-wage/history
+  notes: Year-over-year change inferred from DOL WHD annual table; effective date defaults to Jan 1.
+- jurisdiction: Oregon
+  state_abbr: OR
+  state_fips: 41
+  effective_date: '2025-07-01'
+  rate_min: 15.05
+  rate_tipped: 15.05
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $14.70 to $15.05 effective 7-1-2025
+- jurisdiction: Rhode Island
+  state_abbr: RI
+  state_fips: 44
+  effective_date: '2023-01-01'
+  rate_min: 13.0
+  rate_tipped: null
+  inferred_effective_date: true
+  source: DOL_WHD_history_2026-05-04
+  source_url: https://www.dol.gov/agencies/whd/state/minimum-wage/history
+  notes: Year-over-year change inferred from DOL WHD annual table; effective date defaults to Jan 1.
+- jurisdiction: Rhode Island
+  state_abbr: RI
+  state_fips: 44
+  effective_date: '2024-01-01'
+  rate_min: 14.0
+  rate_tipped: null
+  inferred_effective_date: true
+  source: DOL_WHD_history_2026-05-04
+  source_url: https://www.dol.gov/agencies/whd/state/minimum-wage/history
+  notes: Year-over-year change inferred from DOL WHD annual table; effective date defaults to Jan 1.
+- jurisdiction: Rhode Island
+  state_abbr: RI
+  state_fips: 44
+  effective_date: '2025-01-01'
+  rate_min: 15.0
+  rate_tipped: null
+  inferred_effective_date: true
+  source: EPI_tracker_2026-05-04_inferred
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: Indexed Jan 1, 2025 step inferred from EPI rate_from of subsequent 2026-01-01 change (15.0 -> 16.0). Default Jan
+    1 effective date.
+- jurisdiction: Rhode Island
+  state_abbr: RI
+  state_fips: 44
+  effective_date: '2026-01-01'
+  rate_min: 16.0
+  rate_tipped: null
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $15.00 to $16.00, effective 1-1-2026
+- jurisdiction: Rhode Island
+  state_abbr: RI
+  state_fips: 44
+  effective_date: '2027-01-01'
+  rate_min: 17.0
+  rate_tipped: null
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $17.00, effective 1-1-2027
+- jurisdiction: South Dakota
+  state_abbr: SD
+  state_fips: 46
+  effective_date: '2023-01-01'
+  rate_min: 10.8
+  rate_tipped: null
+  inferred_effective_date: true
+  source: DOL_WHD_history_2026-05-04
+  source_url: https://www.dol.gov/agencies/whd/state/minimum-wage/history
+  notes: Year-over-year change inferred from DOL WHD annual table; effective date defaults to Jan 1.
+- jurisdiction: South Dakota
+  state_abbr: SD
+  state_fips: 46
+  effective_date: '2024-01-01'
+  rate_min: 11.2
+  rate_tipped: null
+  inferred_effective_date: true
+  source: DOL_WHD_history_2026-05-04
+  source_url: https://www.dol.gov/agencies/whd/state/minimum-wage/history
+  notes: Year-over-year change inferred from DOL WHD annual table; effective date defaults to Jan 1.
+- jurisdiction: South Dakota
+  state_abbr: SD
+  state_fips: 46
+  effective_date: '2025-01-01'
+  rate_min: 11.5
+  rate_tipped: 5.75
+  inferred_effective_date: true
+  source: EPI_tracker_2026-05-04_inferred
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: Indexed Jan 1, 2025 step inferred from EPI rate_from of subsequent 2026-01-01 change (11.5 -> 11.85). Default Jan
+    1 effective date.
+- jurisdiction: South Dakota
+  state_abbr: SD
+  state_fips: 46
+  effective_date: '2026-01-01'
+  rate_min: 11.85
+  rate_tipped: 5.93
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $11.50 to $11.85, effective 1-1-2026
+- jurisdiction: Vermont
+  state_abbr: VT
+  state_fips: 50
+  effective_date: '2023-01-01'
+  rate_min: 13.18
+  rate_tipped: null
+  inferred_effective_date: true
+  source: DOL_WHD_history_2026-05-04
+  source_url: https://www.dol.gov/agencies/whd/state/minimum-wage/history
+  notes: Year-over-year change inferred from DOL WHD annual table; effective date defaults to Jan 1.
+- jurisdiction: Vermont
+  state_abbr: VT
+  state_fips: 50
+  effective_date: '2024-01-01'
+  rate_min: 13.67
+  rate_tipped: null
+  inferred_effective_date: true
+  source: DOL_WHD_history_2026-05-04
+  source_url: https://www.dol.gov/agencies/whd/state/minimum-wage/history
+  notes: Year-over-year change inferred from DOL WHD annual table; effective date defaults to Jan 1.
+- jurisdiction: Vermont
+  state_abbr: VT
+  state_fips: 50
+  effective_date: '2025-01-01'
+  rate_min: 14.01
+  rate_tipped: 7.01
+  inferred_effective_date: true
+  source: EPI_tracker_2026-05-04_inferred
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: Indexed Jan 1, 2025 step inferred from EPI rate_from of subsequent 2026-01-01 change (14.01 -> 14.42). Default Jan
+    1 effective date.
+- jurisdiction: Vermont
+  state_abbr: VT
+  state_fips: 50
+  effective_date: '2026-01-01'
+  rate_min: 14.42
+  rate_tipped: 7.21
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $14.01 to $14.42, effective 1-1-2026
+- jurisdiction: Virginia
+  state_abbr: VA
+  state_fips: 51
+  effective_date: '2023-01-01'
+  rate_min: 12.0
+  rate_tipped: null
+  inferred_effective_date: true
+  source: DOL_WHD_history_2026-05-04
+  source_url: https://www.dol.gov/agencies/whd/state/minimum-wage/history
+  notes: Year-over-year change inferred from DOL WHD annual table; effective date defaults to Jan 1.
+- jurisdiction: Virginia
+  state_abbr: VA
+  state_fips: 51
+  effective_date: '2025-01-01'
+  rate_min: 12.41
+  rate_tipped: null
+  inferred_effective_date: true
+  source: EPI_tracker_2026-05-04_inferred
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: Indexed Jan 1, 2025 step inferred from EPI rate_from of subsequent 2026-01-01 change (12.41 -> 12.77). Default Jan
+    1 effective date.
+- jurisdiction: Virginia
+  state_abbr: VA
+  state_fips: 51
+  effective_date: '2026-01-01'
+  rate_min: 12.77
+  rate_tipped: null
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $12.41 to $12.77, effective 1-1-2026
+- jurisdiction: Virginia
+  state_abbr: VA
+  state_fips: 51
+  effective_date: '2027-01-01'
+  rate_min: 13.75
+  rate_tipped: null
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $13.75, effective 1-1-2027
+- jurisdiction: Virginia
+  state_abbr: VA
+  state_fips: 51
+  effective_date: '2028-01-01'
+  rate_min: 15.0
+  rate_tipped: null
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $15.00, effective 1-1-2028
+- jurisdiction: Washington
+  state_abbr: WA
+  state_fips: 53
+  effective_date: '2023-01-01'
+  rate_min: 15.74
+  rate_tipped: null
+  inferred_effective_date: true
+  source: DOL_WHD_history_2026-05-04
+  source_url: https://www.dol.gov/agencies/whd/state/minimum-wage/history
+  notes: Year-over-year change inferred from DOL WHD annual table; effective date defaults to Jan 1.
+- jurisdiction: Washington
+  state_abbr: WA
+  state_fips: 53
+  effective_date: '2024-01-01'
+  rate_min: 16.28
+  rate_tipped: null
+  inferred_effective_date: true
+  source: DOL_WHD_history_2026-05-04
+  source_url: https://www.dol.gov/agencies/whd/state/minimum-wage/history
+  notes: Year-over-year change inferred from DOL WHD annual table; effective date defaults to Jan 1.
+- jurisdiction: Washington
+  state_abbr: WA
+  state_fips: 53
+  effective_date: '2025-01-01'
+  rate_min: 16.66
+  rate_tipped: 16.66
+  inferred_effective_date: true
+  source: EPI_tracker_2026-05-04_inferred
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: Indexed Jan 1, 2025 step inferred from EPI rate_from of subsequent 2026-01-01 change (16.66 -> 17.13). Default Jan
+    1 effective date.
+- jurisdiction: Washington
+  state_abbr: WA
+  state_fips: 53
+  effective_date: '2026-01-01'
+  rate_min: 17.13
+  rate_tipped: 17.13
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $16.66 to $17.13, effective 1-1-2026
+- jurisdiction: Wyoming
+  state_abbr: WY
+  state_fips: 56
+  effective_date: '2023-01-01'
+  rate_min: 5.15
+  rate_tipped: null
+  inferred_effective_date: true
+  source: DOL_WHD_history_2026-05-04
+  source_url: https://www.dol.gov/agencies/whd/state/minimum-wage/history
+  notes: Year-over-year change inferred from DOL WHD annual table; effective date defaults to Jan 1.
+substate_changes:
+- jurisdiction_state: Arizona
+  state_abbr: AZ
+  state_fips: 4
+  locality: Flagstaff
+  locality_id: az_flagstaff
+  effective_date: '2026-01-01'
+  rate_min: 18.35
+  rate_tipped: 18.35
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $17.85 to $18.35, effective 1-1-2026
+- jurisdiction_state: Arizona
+  state_abbr: AZ
+  state_fips: 4
+  locality: Tucson
+  locality_id: az_tucson
+  effective_date: '2026-01-01'
+  rate_min: 15.45
+  rate_tipped: 12.45
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $15.00 to $15.45, effective 1-1-2026
+- jurisdiction_state: California
+  state_abbr: CA
+  state_fips: 6
+  locality: Alameda
+  locality_id: ca_alameda
+  effective_date: '2025-07-01'
+  rate_min: 17.46
+  rate_tipped: 17.46
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $17.00 to $17.46, effective 7-1-2025
+- jurisdiction_state: California
+  state_abbr: CA
+  state_fips: 6
+  locality: Belmont
+  locality_id: ca_belmont
+  effective_date: '2026-01-01'
+  rate_min: 18.95
+  rate_tipped: 18.95
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $18.30 to $18.95, effective 1-1-2026
+- jurisdiction_state: California
+  state_abbr: CA
+  state_fips: 6
+  locality: Berkeley
+  locality_id: ca_berkeley
+  effective_date: '2025-07-01'
+  rate_min: 19.18
+  rate_tipped: 19.18
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $18.67 to $19.18, effective 7-1-2025
+- jurisdiction_state: California
+  state_abbr: CA
+  state_fips: 6
+  locality: Burlingame
+  locality_id: ca_burlingame
+  effective_date: '2026-01-01'
+  rate_min: 17.86
+  rate_tipped: 17.86
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $17.43 to $17.86, effective 1-1-2026
+- jurisdiction_state: California
+  state_abbr: CA
+  state_fips: 6
+  locality: Cupertino
+  locality_id: ca_cupertino
+  effective_date: '2026-01-01'
+  rate_min: 18.7
+  rate_tipped: 18.7
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $18.20 to $18.70, effective 1-1-2026
+- jurisdiction_state: California
+  state_abbr: CA
+  state_fips: 6
+  locality: Daly City
+  locality_id: ca_daly_city
+  effective_date: '2026-01-01'
+  rate_min: 17.5
+  rate_tipped: 17.5
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $17.07 to $17.50, effective 1-1-2026
+- jurisdiction_state: California
+  state_abbr: CA
+  state_fips: 6
+  locality: East Palo Alto
+  locality_id: ca_east_palo_alto
+  effective_date: '2026-01-01'
+  rate_min: 17.9
+  rate_tipped: 17.9
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $17.45 to $17.90, effective 1-1-2026
+- jurisdiction_state: California
+  state_abbr: CA
+  state_fips: 6
+  locality: El Cerrito
+  locality_id: ca_el_cerrito
+  effective_date: '2026-01-01'
+  rate_min: 18.82
+  rate_tipped: 18.82
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $18.34 to $18.82, effective 1-1-2026
+- jurisdiction_state: California
+  state_abbr: CA
+  state_fips: 6
+  locality: Emeryville
+  locality_id: ca_emeryville
+  effective_date: '2025-07-01'
+  rate_min: 19.9
+  rate_tipped: 19.9
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $19.36 to $19.90, effective 7-1-2025
+- jurisdiction_state: California
+  state_abbr: CA
+  state_fips: 6
+  locality: Foster City
+  locality_id: ca_foster_city
+  effective_date: '2026-01-01'
+  rate_min: 17.85
+  rate_tipped: 17.85
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $17.39 to $17.85, effective 1-1-2026
+- jurisdiction_state: California
+  state_abbr: CA
+  state_fips: 6
+  locality: Fremont
+  locality_id: ca_fremont
+  effective_date: '2025-07-01'
+  rate_min: 17.75
+  rate_tipped: 17.75
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $17.30 to $17.75, effective 7-1-2025
+- jurisdiction_state: California
+  state_abbr: CA
+  state_fips: 6
+  locality: Half Moon Bay
+  locality_id: ca_half_moon_bay
+  effective_date: '2026-01-01'
+  rate_min: 17.91
+  rate_tipped: 17.91
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $17.47 to $17.91, effective 1-1-2026
+- jurisdiction_state: California
+  state_abbr: CA
+  state_fips: 6
+  locality: Hayward
+  locality_id: ca_hayward
+  effective_date: '2026-01-01'
+  rate_min: 17.79
+  rate_tipped: 17.79
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $17.36 to $17.79, effective 1-1-2026
+- jurisdiction_state: California
+  state_abbr: CA
+  state_fips: 6
+  locality: Los Altos
+  locality_id: ca_los_altos
+  effective_date: '2026-01-01'
+  rate_min: 18.7
+  rate_tipped: 18.7
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $18.20 to $18.70, effective 1-1-2026
+- jurisdiction_state: California
+  state_abbr: CA
+  state_fips: 6
+  locality: Los Angeles
+  locality_id: ca_los_angeles
+  effective_date: '2025-07-01'
+  rate_min: 17.87
+  rate_tipped: 17.87
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $17.28 to $17.87, effective 7-1-2025
+- jurisdiction_state: California
+  state_abbr: CA
+  state_fips: 6
+  locality: Los Angeles County
+  locality_id: ca_los_angeles_county
+  effective_date: '2025-07-01'
+  rate_min: 17.81
+  rate_tipped: 17.81
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $17.27 to $17.81, effective 7-1-2025
+- jurisdiction_state: California
+  state_abbr: CA
+  state_fips: 6
+  locality: Malibu
+  locality_id: ca_malibu
+  effective_date: '2024-07-01'
+  rate_min: 17.27
+  rate_tipped: 17.27
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $16.90 to $17.27, effective 7-1-2024
+- jurisdiction_state: California
+  state_abbr: CA
+  state_fips: 6
+  locality: Menlo Park
+  locality_id: ca_menlo_park
+  effective_date: '2026-01-01'
+  rate_min: 17.55
+  rate_tipped: 17.55
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $17.10 to $17.55, effective 1-1-2026
+- jurisdiction_state: California
+  state_abbr: CA
+  state_fips: 6
+  locality: Milpitas
+  locality_id: ca_milpitas
+  effective_date: '2025-07-01'
+  rate_min: 18.2
+  rate_tipped: 18.2
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $17.70 to $18.20, effective 7-1-2025
+- jurisdiction_state: California
+  state_abbr: CA
+  state_fips: 6
+  locality: Mountain View
+  locality_id: ca_mountain_view
+  effective_date: '2026-01-01'
+  rate_min: 19.7
+  rate_tipped: 19.7
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $19.20 to $19.70, effective 1-1-2026
+- jurisdiction_state: California
+  state_abbr: CA
+  state_fips: 6
+  locality: Novato
+  locality_id: ca_novato
+  effective_date: '2026-01-01'
+  rate_min: 17.73
+  rate_tipped: 17.73
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $17.27 to $17.73, effective 1-1-2026
+- jurisdiction_state: California
+  state_abbr: CA
+  state_fips: 6
+  locality: Oakland
+  locality_id: ca_oakland
+  effective_date: '2026-01-01'
+  rate_min: 17.34
+  rate_tipped: 17.34
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $16.89 to $17.34, effective 1-1-2026
+- jurisdiction_state: California
+  state_abbr: CA
+  state_fips: 6
+  locality: Palo Alto
+  locality_id: ca_palo_alto
+  effective_date: '2026-01-01'
+  rate_min: 18.7
+  rate_tipped: 18.7
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $18.20 to $18.70, effective 1-1-2026
+- jurisdiction_state: California
+  state_abbr: CA
+  state_fips: 6
+  locality: Pasadena
+  locality_id: ca_pasadena
+  effective_date: '2025-07-01'
+  rate_min: 18.04
+  rate_tipped: 18.04
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $17.50 to $18.04, effective 7-1-2025
+- jurisdiction_state: California
+  state_abbr: CA
+  state_fips: 6
+  locality: Petaluma
+  locality_id: ca_petaluma
+  effective_date: '2026-01-01'
+  rate_min: 18.31
+  rate_tipped: 18.31
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $17.97 to $18.31, effective 1-1-2026
+- jurisdiction_state: California
+  state_abbr: CA
+  state_fips: 6
+  locality: Redwood City
+  locality_id: ca_redwood_city
+  effective_date: '2026-01-01'
+  rate_min: 18.65
+  rate_tipped: 18.65
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $18.20 to $18.65, effective 1-1-2026
+- jurisdiction_state: California
+  state_abbr: CA
+  state_fips: 6
+  locality: Richmond
+  locality_id: ca_richmond
+  effective_date: '2026-01-01'
+  rate_min: 19.18
+  rate_tipped: 19.18
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $17.77 to $19.18, effective 1-1-2026
+- jurisdiction_state: California
+  state_abbr: CA
+  state_fips: 6
+  locality: San Carlos
+  locality_id: ca_san_carlos
+  effective_date: '2026-01-01'
+  rate_min: 17.75
+  rate_tipped: 17.75
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $17.32 to $17.75, effective 1-1-2026
+- jurisdiction_state: California
+  state_abbr: CA
+  state_fips: 6
+  locality: San Diego
+  locality_id: ca_san_diego
+  effective_date: '2026-01-01'
+  rate_min: 17.75
+  rate_tipped: 17.75
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $17.25 to $17.75, effective 1-1-2026
+- jurisdiction_state: California
+  state_abbr: CA
+  state_fips: 6
+  locality: San Francisco
+  locality_id: ca_san_francisco
+  effective_date: '2025-07-01'
+  rate_min: 19.18
+  rate_tipped: 19.18
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $18.67 to $19.18, effective 7-1-2025
+- jurisdiction_state: California
+  state_abbr: CA
+  state_fips: 6
+  locality: San Jose
+  locality_id: ca_san_jose
+  effective_date: '2026-01-01'
+  rate_min: 18.45
+  rate_tipped: 18.45
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $17.95 to $18.45, effective 1-1-2026
+- jurisdiction_state: California
+  state_abbr: CA
+  state_fips: 6
+  locality: San Leandro
+  locality_id: ca_san_leandro
+  effective_date: '2026-01-01'
+  rate_min: 16.9
+  rate_tipped: 16.9
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $16.50 to $16.90, effective 1-1-2026
+- jurisdiction_state: California
+  state_abbr: CA
+  state_fips: 6
+  locality: San Mateo
+  locality_id: ca_san_mateo
+  effective_date: '2026-01-01'
+  rate_min: 18.6
+  rate_tipped: 18.6
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $17.95 to $18.60, effective 1-1-2026
+- jurisdiction_state: California
+  state_abbr: CA
+  state_fips: 6
+  locality: San Mateo County
+  locality_id: ca_san_mateo_county
+  effective_date: '2026-01-01'
+  rate_min: 17.95
+  rate_tipped: 17.95
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $17.46 to $17.95, effective 1-1-2026
+- jurisdiction_state: California
+  state_abbr: CA
+  state_fips: 6
+  locality: Santa Clara
+  locality_id: ca_santa_clara
+  effective_date: '2026-01-01'
+  rate_min: 18.7
+  rate_tipped: 18.7
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $18.20 to $18.70, effective 1-1-2026
+- jurisdiction_state: California
+  state_abbr: CA
+  state_fips: 6
+  locality: Santa Monica
+  locality_id: ca_santa_monica
+  effective_date: '2025-07-01'
+  rate_min: 17.81
+  rate_tipped: 17.81
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $17.27 to $17.81, effective 7-1-2025
+- jurisdiction_state: California
+  state_abbr: CA
+  state_fips: 6
+  locality: Santa Rosa
+  locality_id: ca_santa_rosa
+  effective_date: '2026-01-01'
+  rate_min: 18.21
+  rate_tipped: 18.21
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $17.87 to $18.21, effective 1-1-2026
+- jurisdiction_state: California
+  state_abbr: CA
+  state_fips: 6
+  locality: Sonoma
+  locality_id: ca_sonoma
+  effective_date: '2026-01-01'
+  rate_min: 18.47
+  rate_tipped: 18.47
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $18.02 to $18.47, effective 1-1-2026
+- jurisdiction_state: California
+  state_abbr: CA
+  state_fips: 6
+  locality: South San Francisco
+  locality_id: ca_south_san_francisco
+  effective_date: '2026-01-01'
+  rate_min: 18.15
+  rate_tipped: 18.15
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $17.70 to $18.15, effective 1-1-2026
+- jurisdiction_state: California
+  state_abbr: CA
+  state_fips: 6
+  locality: Sunnyvale
+  locality_id: ca_sunnyvale
+  effective_date: '2026-01-01'
+  rate_min: 19.5
+  rate_tipped: 19.5
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $19.00 to $19.50, effective 1-1-2026
+- jurisdiction_state: California
+  state_abbr: CA
+  state_fips: 6
+  locality: West Hollywood
+  locality_id: ca_west_hollywood
+  effective_date: '2026-01-01'
+  rate_min: 20.25
+  rate_tipped: 20.25
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $19.65 to 20.25, effective 1-1-2026
+- jurisdiction_state: Colorado
+  state_abbr: CO
+  state_fips: 8
+  locality: Boulder City
+  locality_id: co_boulder_city
+  effective_date: '2026-01-01'
+  rate_min: 16.82
+  rate_tipped: 13.8
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $15.57 to $16.82, effective 1-1-2026
+- jurisdiction_state: Colorado
+  state_abbr: CO
+  state_fips: 8
+  locality: Boulder City
+  locality_id: co_boulder_city
+  effective_date: '2027-01-01'
+  rate_min: 18.17
+  rate_tipped: 15.15
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $18.17, effective 1-1-2027
+- jurisdiction_state: Colorado
+  state_abbr: CO
+  state_fips: 8
+  locality: Boulder City
+  locality_id: co_boulder_city
+  effective_date: '2028-01-01'
+  rate_min: null
+  rate_tipped: null
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: Annual indexing, effective 1-1-2028
+- jurisdiction_state: Colorado
+  state_abbr: CO
+  state_fips: 8
+  locality: Boulder County
+  locality_id: co_boulder_county
+  effective_date: '2026-01-01'
+  rate_min: 17.99
+  rate_tipped: 13.97
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $16.57 to $17.99, effective 1-1-2026
+- jurisdiction_state: Colorado
+  state_abbr: CO
+  state_fips: 8
+  locality: Boulder County
+  locality_id: co_boulder_county
+  effective_date: '2027-01-01'
+  rate_min: 19.53
+  rate_tipped: 16.51
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $19.53, effective 1-1-2027
+- jurisdiction_state: Colorado
+  state_abbr: CO
+  state_fips: 8
+  locality: Boulder County
+  locality_id: co_boulder_county
+  effective_date: '2028-01-01'
+  rate_min: 21.21
+  rate_tipped: 18.19
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $21.21, effective 1-1-2028
+- jurisdiction_state: Colorado
+  state_abbr: CO
+  state_fips: 8
+  locality: Boulder County
+  locality_id: co_boulder_county
+  effective_date: '2029-01-01'
+  rate_min: 23.03
+  rate_tipped: 20.01
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $23.03, effective 1-1-2029
+- jurisdiction_state: Colorado
+  state_abbr: CO
+  state_fips: 8
+  locality: Boulder County
+  locality_id: co_boulder_county
+  effective_date: '2030-01-01'
+  rate_min: 25.0
+  rate_tipped: 21.98
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $25.00, effective 1-1-2030
+- jurisdiction_state: Colorado
+  state_abbr: CO
+  state_fips: 8
+  locality: Denver
+  locality_id: co_denver
+  effective_date: '2026-01-01'
+  rate_min: 19.29
+  rate_tipped: 16.27
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $18.81 to $19.29, effective 1-1-2026
+- jurisdiction_state: Colorado
+  state_abbr: CO
+  state_fips: 8
+  locality: Edgewater
+  locality_id: co_edgewater
+  effective_date: '2026-01-01'
+  rate_min: 18.17
+  rate_tipped: 15.15
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $16.52 to $18.17, effective 1-1-2026
+- jurisdiction_state: Colorado
+  state_abbr: CO
+  state_fips: 8
+  locality: Edgewater
+  locality_id: co_edgewater
+  effective_date: '2027-01-01'
+  rate_min: 19.99
+  rate_tipped: 16.97
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $19.99, effective 1-1-2027
+- jurisdiction_state: Colorado
+  state_abbr: CO
+  state_fips: 8
+  locality: Edgewater
+  locality_id: co_edgewater
+  effective_date: '2028-01-01'
+  rate_min: 21.99
+  rate_tipped: 18.97
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $21.99, effective 1-1-2028
+- jurisdiction_state: Colorado
+  state_abbr: CO
+  state_fips: 8
+  locality: Edgewater
+  locality_id: co_edgewater
+  effective_date: '2029-01-01'
+  rate_min: null
+  rate_tipped: null
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: Equal to Denver, effective 1-1-2029
+- jurisdiction_state: Illinois
+  state_abbr: IL
+  state_fips: 17
+  locality: Chicago
+  locality_id: il_chicago
+  effective_date: '2025-07-01'
+  rate_min: 16.6
+  rate_tipped: 12.62
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $16.20 to $16.60, effective 7-1-2025
+- jurisdiction_state: Illinois
+  state_abbr: IL
+  state_fips: 17
+  locality: Cook County
+  locality_id: il_cook_county
+  effective_date: '2025-01-01'
+  rate_min: 15.0
+  rate_tipped: 9.0
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $14.05 to $15.00, effective 1-1-2025
+- jurisdiction_state: Maine
+  state_abbr: ME
+  state_fips: 23
+  locality: Portland
+  locality_id: me_portland
+  effective_date: '2026-01-01'
+  rate_min: 16.75
+  rate_tipped: 8.38
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $15.50 to $16.75, effective 1-1-2026
+- jurisdiction_state: Maine
+  state_abbr: ME
+  state_fips: 23
+  locality: Portland
+  locality_id: me_portland
+  effective_date: '2027-01-01'
+  rate_min: 17.75
+  rate_tipped: 8.88
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $17.75, effective 1-1-2027
+- jurisdiction_state: Maine
+  state_abbr: ME
+  state_fips: 23
+  locality: Portland
+  locality_id: me_portland
+  effective_date: '2028-01-01'
+  rate_min: 19.0
+  rate_tipped: 9.5
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $19.00, effective 1-1-2028
+- jurisdiction_state: Maine
+  state_abbr: ME
+  state_fips: 23
+  locality: Portland
+  locality_id: me_portland
+  effective_date: '2029-01-01'
+  rate_min: null
+  rate_tipped: null
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: Annual indexing, effective 1-1-2029
+- jurisdiction_state: Maine
+  state_abbr: ME
+  state_fips: 23
+  locality: Rockland
+  locality_id: me_rockland
+  effective_date: '2026-01-01'
+  rate_min: 16.02
+  rate_tipped: 8.01
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $15.50 to $16.02, effective 1-1-2026
+- jurisdiction_state: Maryland
+  state_abbr: MD
+  state_fips: 24
+  locality: Howard County
+  locality_id: md_howard_county
+  effective_date: '2025-01-01'
+  rate_min: 16.0
+  rate_tipped: null
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $15.00 to $16.00, effective 1-1-2025
+- jurisdiction_state: Maryland
+  state_abbr: MD
+  state_fips: 24
+  locality: Montgomery County
+  locality_id: md_montgomery_county
+  effective_date: '2025-07-01'
+  rate_min: 17.65
+  rate_tipped: null
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $17.15 to $17.65, effective 7-1-2025
+- jurisdiction_state: Maryland
+  state_abbr: MD
+  state_fips: 24
+  locality: Prince George’s County
+  locality_id: md_prince_georges_county
+  effective_date: '2024-01-01'
+  rate_min: 15.0
+  rate_tipped: null
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $13.25 to $15.00, effective 1-1-2024
+- jurisdiction_state: Minnesota
+  state_abbr: MN
+  state_fips: 27
+  locality: Minneapolis
+  locality_id: mn_minneapolis
+  effective_date: '2026-01-01'
+  rate_min: 16.37
+  rate_tipped: 16.37
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $15.97 to $16.37, effective 1-1-2026
+- jurisdiction_state: Minnesota
+  state_abbr: MN
+  state_fips: 27
+  locality: St. Paul
+  locality_id: mn_st_paul
+  effective_date: '2026-01-01'
+  rate_min: 16.37
+  rate_tipped: 16.37
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $15.97 to $16.37, effective 1-1-2026
+- jurisdiction_state: Missouri
+  state_abbr: MO
+  state_fips: 29
+  locality: Kansas City
+  locality_id: mo_kansas_city
+  effective_date: '2026-01-01'
+  rate_min: 15.0
+  rate_tipped: 7.5
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $13.75 to $15.00, effective 1-1-2026
+- jurisdiction_state: Missouri
+  state_abbr: MO
+  state_fips: 29
+  locality: St. Louis
+  locality_id: mo_st_louis
+  effective_date: '2026-01-01'
+  rate_min: 15.0
+  rate_tipped: 7.5
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $13.75 to $15.00, effective 1-1-2026
+- jurisdiction_state: New Mexico
+  state_abbr: NM
+  state_fips: 35
+  locality: Albuquerque
+  locality_id: nm_albuquerque
+  effective_date: '2023-01-01'
+  rate_min: 12.0
+  rate_tipped: 7.2
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $11.50 to $12.00, effective 1-1-2023*
+- jurisdiction_state: New Mexico
+  state_abbr: NM
+  state_fips: 35
+  locality: Bernalillo County
+  locality_id: nm_bernalillo_county
+  effective_date: '2023-01-01'
+  rate_min: 12.0
+  rate_tipped: 3.0
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $11.50 to $12.00, effective 1-1-2023*
+- jurisdiction_state: New Mexico
+  state_abbr: NM
+  state_fips: 35
+  locality: Las Cruces
+  locality_id: nm_las_cruces
+  effective_date: '2026-01-01'
+  rate_min: 13.01
+  rate_tipped: 5.2
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $12.65 to $13.01, effective 1-1-2026
+- jurisdiction_state: New Mexico
+  state_abbr: NM
+  state_fips: 35
+  locality: Santa Fe City
+  locality_id: nm_santa_fe_city
+  effective_date: '2026-03-01'
+  rate_min: 15.4
+  rate_tipped: null
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $15.00 to $15.40, effective 3-1-2026
+- jurisdiction_state: New Mexico
+  state_abbr: NM
+  state_fips: 35
+  locality: Santa Fe City
+  locality_id: nm_santa_fe_city
+  effective_date: '2027-01-01'
+  rate_min: 17.5
+  rate_tipped: null
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $17.50, effective 1-1-2027
+- jurisdiction_state: New Mexico
+  state_abbr: NM
+  state_fips: 35
+  locality: Santa Fe County
+  locality_id: nm_santa_fe_county
+  effective_date: '2026-03-01'
+  rate_min: 15.4
+  rate_tipped: 4.62
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $15.00 to $15.40, effective 3-1-2026
+- jurisdiction_state: New York
+  state_abbr: NY
+  state_fips: 36
+  locality: Nassau, Suffolk, and Westchester Counties
+  locality_id: ny_li_westchester
+  effective_date: '2026-01-01'
+  rate_min: 17.0
+  rate_tipped: 11.35
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $16.50 to $17.00, effective 1-1-2026
+- jurisdiction_state: New York
+  state_abbr: NY
+  state_fips: 36
+  locality: New York City
+  locality_id: ny_new_york_city
+  effective_date: '2026-01-01'
+  rate_min: 17.0
+  rate_tipped: 11.35
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $16.50 to $17.00, effective 1-1-2026
+- jurisdiction_state: Oregon
+  state_abbr: OR
+  state_fips: 41
+  locality: Nonurban counties
+  locality_id: or_nonurban_counties
+  effective_date: '2025-07-01'
+  rate_min: 14.05
+  rate_tipped: 14.05
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $13.70 to $14.05, effective 7-1-2025
+- jurisdiction_state: Oregon
+  state_abbr: OR
+  state_fips: 41
+  locality: Portland Urban Growth Boundary
+  locality_id: or_portland_urban_growth_boundary
+  effective_date: '2025-07-01'
+  rate_min: 16.3
+  rate_tipped: 16.3
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $15.95 to $16.30, effective 7-1-2025
+- jurisdiction_state: Washington
+  state_abbr: WA
+  state_fips: 53
+  locality: Bellingham
+  locality_id: wa_bellingham
+  effective_date: '2026-01-01'
+  rate_min: 19.13
+  rate_tipped: 19.13
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $18.66 to $19.13, effective 1-1-2026
+- jurisdiction_state: Washington
+  state_abbr: WA
+  state_fips: 53
+  locality: Burien
+  locality_id: wa_burien
+  effective_date: '2025-01-01'
+  rate_min: 21.16
+  rate_tipped: 21.16
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $16.28 to $21.16, effective 1-1-2025
+- jurisdiction_state: Washington
+  state_abbr: WA
+  state_fips: 53
+  locality: Burien
+  locality_id: wa_burien
+  effective_date: '2026-01-01'
+  rate_min: null
+  rate_tipped: null
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: Three dollars above the state minimum wage, effective 1-1-2026 and thereafter
+- jurisdiction_state: Washington
+  state_abbr: WA
+  state_fips: 53
+  locality: Everett
+  locality_id: wa_everett
+  effective_date: '2026-01-01'
+  rate_min: 20.77
+  rate_tipped: 20.77
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $20.24 to $20.77, effective 1-1-2026
+- jurisdiction_state: Washington
+  state_abbr: WA
+  state_fips: 53
+  locality: King County
+  locality_id: wa_king_county
+  effective_date: '2026-01-01'
+  rate_min: 20.82
+  rate_tipped: 20.82
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $20.29 to $20.82, effective 1-1-2026
+- jurisdiction_state: Washington
+  state_abbr: WA
+  state_fips: 53
+  locality: Renton
+  locality_id: wa_renton
+  effective_date: '2026-01-01'
+  rate_min: 21.57
+  rate_tipped: 21.57
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $20.90 to $21.57, effective 1-1-2026
+- jurisdiction_state: Washington
+  state_abbr: WA
+  state_fips: 53
+  locality: SeaTac
+  locality_id: wa_seatac
+  effective_date: '2026-01-01'
+  rate_min: 20.74
+  rate_tipped: 20.74
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $20.17 to $20.74, effective 1-1-2026
+- jurisdiction_state: Washington
+  state_abbr: WA
+  state_fips: 53
+  locality: Seattle
+  locality_id: wa_seattle
+  effective_date: '2026-01-01'
+  rate_min: 21.3
+  rate_tipped: 21.3
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $20.76 to $21.30, effective 1-1-2026
+- jurisdiction_state: Washington
+  state_abbr: WA
+  state_fips: 53
+  locality: Tacoma
+  locality_id: wa_tacoma
+  effective_date: '2026-01-01'
+  rate_min: 17.13
+  rate_tipped: 17.13
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $16.66 to $17.13, effective 1-1-2026
+- jurisdiction_state: Washington
+  state_abbr: WA
+  state_fips: 53
+  locality: Tukwila
+  locality_id: wa_tukwila
+  effective_date: '2026-01-01'
+  rate_min: 21.65
+  rate_tipped: 21.65
+  inferred_effective_date: false
+  source: EPI_tracker_2026-05-04
+  source_url: https://www.epi.org/minimum-wage-tracker/
+  notes: $21.10 to $21.65, effective 1-1-2026

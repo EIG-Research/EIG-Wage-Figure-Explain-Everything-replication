@@ -1,0 +1,47 @@
+YEAR,bls_share_num,bls_at_count_int,bls_below_count_int,bls_total_hourly_int,source_url_chr,source_notes_chr
+1979,0.134,3997,2916,51721,https://www.bls.gov/opub/reports/minimum-wage/2024/home.htm,BLS Report 1117 Table 10 Total panel
+1980,0.151,4686,3087,51335,https://www.bls.gov/opub/reports/minimum-wage/2024/home.htm,BLS Report 1117 Table 10 Total panel
+1981,0.151,4311,3513,51869,https://www.bls.gov/opub/reports/minimum-wage/2024/home.htm,BLS Report 1117 Table 10 Total panel
+1982,0.128,4148,2348,50846,https://www.bls.gov/opub/reports/minimum-wage/2024/home.htm,BLS Report 1117 Table 10 Total panel
+1983,0.122,4261,2077,51820,https://www.bls.gov/opub/reports/minimum-wage/2024/home.htm,BLS Report 1117 Table 10 Total panel
+1984,0.110,4125,1838,54143,https://www.bls.gov/opub/reports/minimum-wage/2024/home.htm,BLS Report 1117 Table 10 Total panel
+1985,0.099,3899,1639,55762,https://www.bls.gov/opub/reports/minimum-wage/2024/home.htm,BLS Report 1117 Table 10 Total panel
+1986,0.088,3461,1599,57529,https://www.bls.gov/opub/reports/minimum-wage/2024/home.htm,BLS Report 1117 Table 10 Total panel
+1987,0.079,3229,1468,59552,https://www.bls.gov/opub/reports/minimum-wage/2024/home.htm,BLS Report 1117 Table 10 Total panel
+1988,0.065,2608,1319,60878,https://www.bls.gov/opub/reports/minimum-wage/2024/home.htm,BLS Report 1117 Table 10 Total panel
+1989,0.051,1790,1372,62389,https://www.bls.gov/opub/reports/minimum-wage/2024/home.htm,BLS Report 1117 Table 10 Total panel
+1990,0.051,1096,2132,63172,https://www.bls.gov/opub/reports/minimum-wage/2024/home.htm,BLS Report 1117 Table 10 Total panel; federal MW change in year
+1991,0.084,2906,2377,62627,https://www.bls.gov/opub/reports/minimum-wage/2024/home.htm,BLS Report 1117 Table 10 Total panel; federal MW change in year
+1992,0.077,2982,1939,63610,https://www.bls.gov/opub/reports/minimum-wage/2024/home.htm,BLS Report 1117 Table 10 Total panel
+1993,0.067,2625,1707,64274,https://www.bls.gov/opub/reports/minimum-wage/2024/home.htm,BLS Report 1117 Table 10 Total panel
+1994,0.062,2132,1995,66549,https://www.bls.gov/opub/reports/minimum-wage/2024/home.htm,BLS Report 1117 Table 10 Total panel
+1995,0.053,1956,1699,68354,https://www.bls.gov/opub/reports/minimum-wage/2024/home.htm,BLS Report 1117 Table 10 Total panel
+1996,0.054,1861,1863,69255,https://www.bls.gov/opub/reports/minimum-wage/2024/home.htm,BLS Report 1117 Table 10 Total panel; federal MW change in year
+1997,0.067,1764,2990,70735,https://www.bls.gov/opub/reports/minimum-wage/2024/home.htm,BLS Report 1117 Table 10 Total panel; federal MW change in year
+1998,0.062,1593,2834,71440,https://www.bls.gov/opub/reports/minimum-wage/2024/home.htm,BLS Report 1117 Table 10 Total panel
+1999,0.046,1146,2194,72306,https://www.bls.gov/opub/reports/minimum-wage/2024/home.htm,BLS Report 1117 Table 10 Total panel
+2000,0.036,898,1752,73496,https://www.bls.gov/opub/reports/minimum-wage/2024/home.htm,BLS Report 1117 Table 10 Total panel
+2001,0.030,656,1518,73392,https://www.bls.gov/opub/reports/minimum-wage/2024/home.htm,BLS Report 1117 Table 10 Total panel
+2002,0.030,567,1579,72508,https://www.bls.gov/opub/reports/minimum-wage/2024/home.htm,BLS Report 1117 Table 10 Total panel
+2003,0.029,545,1555,72946,https://www.bls.gov/opub/reports/minimum-wage/2024/home.htm,BLS Report 1117 Table 10 Total panel
+2004,0.027,520,1483,73939,https://www.bls.gov/opub/reports/minimum-wage/2024/home.htm,BLS Report 1117 Table 10 Total panel
+2005,0.025,479,1403,75609,https://www.bls.gov/opub/reports/minimum-wage/2024/home.htm,BLS Report 1117 Table 10 Total panel
+2006,0.022,409,1283,76514,https://www.bls.gov/opub/reports/minimum-wage/2024/home.htm,BLS Report 1117 Table 10 Total panel
+2007,0.023,267,1462,75873,https://www.bls.gov/opub/reports/minimum-wage/2024/home.htm,BLS Report 1117 Table 10 Total panel; federal MW change in year
+2008,0.030,286,1940,75305,https://www.bls.gov/opub/reports/minimum-wage/2024/home.htm,BLS Report 1117 Table 10 Total panel; federal MW change in year
+2009,0.049,980,2592,72611,https://www.bls.gov/opub/reports/minimum-wage/2024/home.htm,BLS Report 1117 Table 10 Total panel; federal MW change in year
+2010,0.060,1820,2541,72902,https://www.bls.gov/opub/reports/minimum-wage/2024/home.htm,BLS Report 1117 Table 10 Total panel
+2011,0.052,1677,2152,73926,https://www.bls.gov/opub/reports/minimum-wage/2024/home.htm,BLS Report 1117 Table 10 Total panel
+2012,0.047,1566,1984,75276,https://www.bls.gov/opub/reports/minimum-wage/2024/home.htm,BLS Report 1117 Table 10 Total panel
+2013,0.043,1532,1768,75948,https://www.bls.gov/opub/reports/minimum-wage/2024/home.htm,BLS Report 1117 Table 10 Total panel
+2014,0.039,1255,1737,77207,https://www.bls.gov/opub/reports/minimum-wage/2024/home.htm,BLS Report 1117 Table 10 Total panel
+2015,0.033,870,1691,78232,https://www.bls.gov/opub/reports/minimum-wage/2024/home.htm,BLS Report 1117 Table 10 Total panel
+2016,0.027,701,1451,79883,https://www.bls.gov/opub/reports/minimum-wage/2024/home.htm,BLS Report 1117 Table 10 Total panel
+2017,0.023,542,1282,80439,https://www.bls.gov/opub/reports/minimum-wage/2024/home.htm,BLS Report 1117 Table 10 Total panel
+2018,0.021,434,1276,81915,https://www.bls.gov/opub/reports/minimum-wage/2024/home.htm,BLS Report 1117 Table 10 Total panel
+2019,0.019,392,1211,82289,https://www.bls.gov/opub/reports/minimum-wage/2024/home.htm,BLS Report 1117 Table 10 Total panel
+2020,0.015,247,865,73305,https://www.bls.gov/opub/reports/minimum-wage/2024/home.htm,BLS Report 1117 Table 10 Total panel
+2021,0.014,181,910,76125,https://www.bls.gov/opub/reports/minimum-wage/2024/home.htm,BLS Report 1117 Table 10 Total panel
+2022,0.013,141,882,78729,https://www.bls.gov/opub/reports/minimum-wage/2024/home.htm,BLS Report 1117 Table 10 Total panel
+2023,0.011,81,789,80538,https://www.bls.gov/opub/reports/minimum-wage/2024/home.htm,BLS Report 1117 Table 10 Total panel
+2024,0.010,82,760,80348,https://www.bls.gov/opub/reports/minimum-wage/2024/home.htm,BLS Report 1117 Table 10 Total panel; 2024 headline figure

@@ -1,0 +1,6 @@
+percentile,seasonal_strength,seasonal_amp_pct,month_F_pvalue,acf_lag12_of_diff
+10th,0.031,0.9,0.125,0.077
+25th,0.125,1.61,1.06e-10,0.156
+Median,0.134,1.56,7.6e-12,0.087
+75th,0.096,1.3,1.71e-7,0.133
+90th,0.074,1.77,2.55e-5,0.105

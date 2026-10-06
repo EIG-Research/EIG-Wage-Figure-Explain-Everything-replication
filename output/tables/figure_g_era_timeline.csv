@@ -1,0 +1,6 @@
+era_i_int,era_slug_chr,era_name_chr,era_start_dt,era_end_dt,duration_months_int,growth_ann_pct_num,growth_cum_pct_num,unrate_mean_num,unrate_obs_int,months_at_or_below_5_int,low_unemp_bool
+1,stagnation1,First long wage stagnation*,1982-12-01,1996-08-01,165,0.1,1.345472741333431,6.641818181818182,165,1,FALSE
+2,itboom,IT boom,1996-09-01,2001-02-01,54,2.6,12.00406974474788,4.464814814814815,54,46,TRUE
+3,stagnation2,Second long wage stagnation,2001-03-01,2014-10-01,164,0.4,5.009797465797394,6.580487804878048,164,41,FALSE
+4,recovery,Nascent recovery,2014-11-01,2020-02-01,64,1.8,9.90739287821285,4.428125,64,52,TRUE
+5,covid_aftermath,COVID-19 aftermath,2020-03-01,2026-08-01,78,1,6.372106468091876,4.815584415584415,77,60,TRUE

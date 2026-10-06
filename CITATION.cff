@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use these materials, please cite the work as below."
+title: "Real Hourly Wages in the United States, 1982-2026: Replication Package"
+abstract: >-
+  Replication materials for an Economic Innovation Group analysis of U.S. real hourly
+  wages from 1982 through 2026 across the wage distribution, age groups, generations,
+  labor-market-entry cohorts, education, and sex, using Current Population Survey
+  outgoing rotation group microdata from IPUMS-CPS, deflated with the PCE price index.
+type: software
+authors:
+  - family-names: "Glasner"
+    given-names: "Benjamin"
+    affiliation: "Economic Innovation Group"
+year: 2026
+license: MIT
+keywords:
+  - real wages
+  - wage inequality
+  - Current Population Survey
+  - IPUMS
+  - minimum wage
+url: "https://github.com/EIG-Research/EIG-Wage-Figure-Explain-Everything-replication"
+repository-code: "https://github.com/EIG-Research/EIG-Wage-Figure-Explain-Everything-replication"
