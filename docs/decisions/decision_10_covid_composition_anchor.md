@@ -1,6 +1,6 @@
 # Decision 10 — Index the COVID-19 aftermath chart to January 2022, after the COVID composition effect had largely cleared
 
-- Status: Active
+- Status: Active (the March 2020 start month below is superseded by the 2026-10-07 addendum at the end of this memo: the era now starts February 2020)
 - Decided: 2026-09-29
 - Decided by: Benjamin Glasner, EIG
 - Affects: `code/figure_a_percentiles.R` (step 8e, `covid_aftermath` era), `code/figure_a_datawrapper_publish.R` (`figure_a_indexed_covid_aftermath`), and that era's PNG, CSV sidecars, and Datawrapper chart.
@@ -80,3 +80,31 @@ COVID month, matching the dashed span and Figure 6 era 5.
 - The `covid_aftermath` roll12 CSV equals 100 at every percentile in January 2022.
 - Latest index (July 2026), January 2022 = 100: P10 108.5, P25 105.7, median 102.8, P75
   103.3, P90 108.1.
+
+## Addendum, 2026-10-07: era boundary moves to the NBER peak month
+
+- Decided by: Benjamin Glasner, EIG
+- Supersedes only the start month in the Decision section above. The anchor decision
+  (January 2022 = 100) and everything else in this memo stand.
+
+The `covid_aftermath` era now starts **February 2020**, not March 2020, and the
+`recovery` era ends **January 2020**, not February 2020. February 2020 is the NBER business-cycle
+peak, so the aftermath era begins in the NBER peak month, the same convention as the
+second long wage stagnation (March 2001). It is also the era-5 start the AWP comparison
+already used, so the repo's eras and AWP's eras now share boundaries.
+
+- **Unchanged:** the March 2020 to December 2021 dashed COVID span. It marks the months
+  when COVID-driven changes in CPS sample composition confound the percentiles, not an era
+  boundary, so February 2020 stays a bridge month in the dashed series. The January 2022
+  anchor is a 12-month window (February 2021 to January 2022) and does not depend on the era
+  start.
+- **Reversal of the Decision section's "matching the dashed span":** the era start no
+  longer coincides with the dashed span's first month. The two serve different purposes.
+- **Affects:** `code/figure_a_percentiles.R` (step 8e, `recovery` and `covid_aftermath`),
+  `code/figure_f_era_bars_tables.R` (`era_specs_df` eras 4 and 5), and every output built
+  from the era table: Figures 6a-6c, Figure 7 (era timeline), Figure H (sex gap by era),
+  their CSVs, and the `recovery` and `covid_aftermath` charts.
+- **Effect on era 4 and era 5 (median, 12-month rolling):** era 4 is 63 months (was 64),
+  annualized growth 1.81 percent (was 1.82), average unemployment 4.4 percent. Era 5 is 79
+  months (was 78), annualized growth 1.01 percent (was 0.97), average unemployment 4.8
+  percent.

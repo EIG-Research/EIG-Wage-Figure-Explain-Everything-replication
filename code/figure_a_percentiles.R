@@ -1146,12 +1146,13 @@ ggplot2::ggsave(
 #   stagnation1      First Long Wage Stagnation*      1982m12 -> 1996m08
 #   itboom           Late-1990s IT boom               1996m09 -> 2001m02
 #   stagnation2      Second Long Wage Stagnation      2001m03 -> 2014m10
-#   recovery         Nascent Recovery Slams into COVID 2014m11 -> 2020m02
-#   covid_aftermath  COVID Aftermath                  2020m03 -> latest
+#   recovery         Nascent Recovery Slams into COVID 2014m11 -> 2020m01
+#   covid_aftermath  COVID Aftermath                  2020m02 -> latest
 #   uncertainty      Age of economic uncertainty      2024m01 -> latest
 #
-# stagnation2 keeps its March 2001 window but is anchored 2003m01, and
-# covid_aftermath keeps its March 2020 window but is anchored 2022m01.
+# The recovery / covid_aftermath boundary sits on the NBER peak (February
+# 2020, the first month of the aftermath era). covid_aftermath starts
+# February 2020 but is anchored 2022m01.
 #
 # Two variants share the COVID Aftermath window but differ in anchor:
 #   covid_aftermath_idx2021     2021m01 -> latest, anchored 2021m01
@@ -1197,22 +1198,20 @@ era_specs_list <- list(
     end_year_int    = 2001L, end_month_int   = 2L,
     caption_extra_chr = ""
   ),
-  # Full March 2001 window, rebased to January 2003 = 100, so the chart
-  # reads as change relative to January 2003; the 2001-2002 months sit
-  # off 100 on the same scale.
+  # Full March 2001 window, indexed to its own start month (March 2001 =
+  # 100), so the chart reads as cumulative change since March 2001.
   list(
-    slug_chr         = "stagnation2",
-    title_chr        = "Second Long Wage Stagnation",
-    start_year_int   = 2001L, start_month_int  = 3L,
-    end_year_int     = 2014L, end_month_int    = 10L,
-    anchor_year_int  = 2003L, anchor_month_int = 1L,
+    slug_chr        = "stagnation2",
+    title_chr       = "Second Long Wage Stagnation",
+    start_year_int  = 2001L, start_month_int = 3L,
+    end_year_int    = 2014L, end_month_int   = 10L,
     caption_extra_chr = ""
   ),
   list(
     slug_chr        = "recovery",
     title_chr       = "Nascent Recovery Slams into COVID",
     start_year_int  = 2014L, start_month_int = 11L,
-    end_year_int    = 2020L, end_month_int   = 2L,
+    end_year_int    = 2020L, end_month_int   = 1L,
     caption_extra_chr = ""
   ),
   # Same era and anchor (November 2014) as "recovery", extended through
@@ -1229,14 +1228,15 @@ era_specs_list <- list(
       "relative to the surrounding months."
     )
   ),
-  # Starts March 2020 (the first COVID month, matching the dashed span and
-  # Figure 6 era 5) but is rebased to January 2022 = 100, when the
-  # composition effect measured by 12_covid_composition_diagnostic.R had
-  # largely cleared from the 12-month rolling base (Decision 10).
+  # Starts February 2020 (the NBER peak month, matching Figure 6 era 5) but
+  # is rebased to January 2022 = 100, when the composition effect measured
+  # by 12_covid_composition_diagnostic.R had largely cleared from the
+  # 12-month rolling base (Decision 10, addendum 2026-10-07). The dashed
+  # COVID span still starts March 2020.
   list(
     slug_chr         = "covid_aftermath",
     title_chr        = "COVID Aftermath",
-    start_year_int   = 2020L, start_month_int  = 3L,
+    start_year_int   = 2020L, start_month_int  = 2L,
     end_year_int     = NA_integer_, end_month_int = NA_integer_,
     anchor_year_int  = 2022L, anchor_month_int = 1L,
     caption_extra_chr = paste0(

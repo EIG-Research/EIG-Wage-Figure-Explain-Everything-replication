@@ -129,13 +129,15 @@ era_specs_df <- tibble::tribble(
   1L,         "stagnation1",     "First long wage stagnation",       1982L,           12L,              1996L,         8L,
   2L,         "itboom",          "Late-1990s IT boom",               1996L,            9L,              2001L,         2L,
   3L,         "stagnation2",     "Second long wage stagnation",      2001L,            3L,              2014L,        10L,
-  4L,         "recovery",        "Nascent recovery meets COVID-19",  2014L,           11L,              2020L,         2L,
-  5L,         "covid_aftermath", "COVID-19 aftermath",               2020L,            3L,              NA_integer_,   NA_integer_
+  4L,         "recovery",        "Nascent recovery meets COVID-19",  2014L,           11L,              2020L,         1L,
+  5L,         "covid_aftermath", "COVID-19 aftermath",               2020L,            2L,              NA_integer_,   NA_integer_
 )
-# Era 4 runs through February 2020 to match the figure_a recovery chart, so
-# era 5 starts March 2020 here (the partition must stay contiguous). The
-# AWP comparison in step 11 keeps its own original boundaries (era 5 first
-# month February 2020) so its reference check still reproduces AWP values.
+# Era 4 runs through January 2020 and era 5 starts February 2020, the NBER
+# peak month, matching the figure_a recovery and covid_aftermath charts
+# (Decision 10 addendum, 2026-10-07). The boundaries are now the same as
+# the AWP comparison's in step 11 (its era 5 first month is February 2020);
+# the AWP vector below stays separate because the reference check reproduces
+# fixed AWP slim-deck values and must not move with this table.
 awp_era_start_month_idx_int <- c(
   1982L * 12L + 12L - 1L, 1996L * 12L + 9L - 1L, 2001L * 12L + 3L - 1L,
   2014L * 12L + 11L - 1L, 2020L * 12L + 2L - 1L

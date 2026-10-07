@@ -21,7 +21,7 @@ record display, figure-construction, and data-handling choices.
 | `decision_07_smoothing_12mo_ewma.md` | 12-month EWMA display smoother | Superseded by 08 |
 | `decision_08_smoothing_12mo_flat.md` | Flat 12-month backward rolling-average display smoother | Active |
 | `decision_09_pooled_window_era_bar_figures.md` | Construction of the Figure 6 era-bar charts | Active |
-| `decision_10_covid_composition_anchor.md` | COVID-19 aftermath chart indexed to January 2022 | Active |
+| `decision_10_covid_composition_anchor.md` | COVID-19 aftermath chart indexed to January 2022; addendum 2026-10-07 moves the era boundary to February 2020 (NBER peak) | Active |
 | `decision_11_drop_asec_sample_records.md` | Drop the March ASEC-sample duplicate records | Active |
 | `decision_12_figure_d_calendar_rolling_window.md` | Figure D rolling window spans 12 calendar months | Active |
 
